@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McLaren MCL39 — Технические характеристики 2024</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏎️</text></svg>">
+</head>
+<body>
+    <!-- Статичная вывеска -->
+    <div class="static-title">
+        <div class="static-model">MCL39</div>
+        <div class="static-year">2024</div>
+    </div>
+
+    
+    <!-- Шапка -->
+    <header class="header">
+        <nav class="container nav-container">
+            <div class="logo">
+                <div class="logo-icon">MCL</div>
+                <span class="logo-title">McLaren MCL39 2024</span>
+            </div>
+            
+            <div class="desktop-menu">
+                <a href="#main" class="nav-link">Общая информация</a>
+                <a href="#engine" class="nav-link">Двигатель</a>
+                <a href="#chassis" class="nav-link">Шасси</a>
+                <a href="#aero" class="nav-link">Аэродинамика</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+            </div>
+            
+            <button class="burger-btn" id="burgerBtn" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#main" class="mobile-link" onclick="closeMenu()">Общая информация</a>
+            <a href="#engine" class="mobile-link" onclick="closeMenu()">Двигатель</a>
+            <a href="#chassis" class="mobile-link" onclick="closeMenu()">Шасси</a>
+            <a href="#aero" class="mobile-link" onclick="closeMenu()">Аэродинамика</a>
+            <a href="#contact" class="mobile-link" onclick="closeMenu()">Контакты</a>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section id="main" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">McLaren <span class="hero-highlight">MCL39</span></h1>
+                <p class="hero-subtitle">Formula 1 2024 Season</p>
+                <p class="hero-description">
+                    McLaren MCL39 — новейший болид команды McLaren для сезона 2024 Formula 1.
+                    Полностью переработанная аэродинамика, усовершенствованная гибридная система
+                    и инновационные решения в соответствии с регламентом FIA 2024.
+                </p>
+                <div class="hero-specs">
+                    <div class="spec-item">
+                        <div class="spec-value">MCL39</div>
+                        <div class="spec-label">Модель</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-value">Mercedes</div>
+                        <div class="spec-label">Двигатель</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-value">798 кг</div>
+                        <div class="spec-label">Минимальный вес</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-car">
+                <div class="car-container">
+                    <div class="car-image" id="carImage">
+                        <div class="car-overlay">
+                            <div class="car-spec">V6 1.6L Turbo</div>
+                            <div class="car-spec">Mercedes PU106C</div>
+                            <div class="car-spec">15,000 об/мин</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Общая информация -->
+    <section id="general" class="info-section">
+        <div class="container">
+            <h2 class="section-title">
+                Общая <span class="section-highlight">информация</span>
+            </h2>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon"></div>
+                    <h3>Команда</h3>
+                    <p>McLaren Formula 1 Team</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"></div>
+                    <h3>Модель</h3>
+                    <p>MCL39</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"></div>
+                    <h3>Сезон</h3>
+                    <p>Formula 1 2024</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"></div>
+                    <h3>Шасси</h3>
+                    <p>Монокок из углеродного волокна (carbon composite)</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"></div>
+                    <h3>Регламент</h3>
+                    <p>FIA Formula One Technical Regulations 2024</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"></div>
+                    <h3>Вес</h3>
+                    <p>798 кг (с пилотом)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Силовая установка -->
+    <section id="engine" class="specs-section dark">
+        <div class="container">
+            <h2 class="section-title">
+                Силовая <span class="section-highlight">установка</span>
+            </h2>
+            
+            <div class="specs-details">
+                <div class="specs-category">
+                    <h3><span class="category-icon"></span> Двигатель Mercedes-AMG</h3>
+                    <div class="specs-grid">
+                        <div class="spec-detail">
+                            <div class="detail-label">Производитель</div>
+                            <div class="detail-value">Mercedes-AMG High Performance Powertrains</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Обозначение</div>
+                            <div class="detail-value">Mercedes PU106C Hybrid</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Тип</div>
+                            <div class="detail-value">1.6-литровый V6 с турбонаддувом</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Угол развала</div>
+                            <div class="detail-value">90°</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Обороты</div>
+                            <div class="detail-value">15,000 об/мин</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Расход топлива</div>
+                            <div class="detail-value">100 кг/час (лимит)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="specs-category">
+                    <h3><span class="category-icon"></span> Гибридная система (ERS)</h3>
+                    <div class="specs-grid">
+                        <div class="spec-detail">
+                            <div class="detail-label">MGU-K (мощность)</div>
+                            <div class="detail-value">~120 кВт (160 л.с.)</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">MGU-H</div>
+                            <div class="detail-value">Интегрирован с турбокомпрессором</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Батарея</div>
+                            <div class="detail-value">Литий-ионная (FIA-стандарт)</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Электроника</div>
+                            <div class="detail-value">Стандартный блок управления FIA</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="specs-category">
+                    <h3><span class="category-icon"></span> Трансмиссия</h3>
+                    <div class="specs-grid">
+                        <div class="spec-detail">
+                            <div class="detail-label">Коробка передач</div>
+                            <div class="detail-value">8-ступенчатая, продольная</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Тип</div>
+                            <div class="detail-value">Полуавтоматическая</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Задняя передача</div>
+                            <div class="detail-value">1 (обязательная)</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Дифференциал</div>
+                            <div class="detail-value">Электронно-управляемый</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Шасси и подвеска -->
+    <section id="chassis" class="specs-section">
+        <div class="container">
+            <h2 class="section-title">
+                Шасси и <span class="section-highlight">подвеска</span>
+            </h2>
+            
+            <div class="specs-details">
+                <div class="specs-category">
+                    <h3><span class="category-icon"></span> Передняя подвеска</h3>
+                    <div class="specs-grid">
+                        <div class="spec-detail">
+                            <div class="detail-label">Тип</div>
+                            <div class="detail-value">Push-rod (толкающая штанга)</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Конструкция</div>
+                            <div class="detail-value">Двойные поперечные рычаги</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Пружины</div>
+                            <div class="detail-value">Торсионные</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Амортизаторы</div>
+                            <div class="detail-value">Гидравлические</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="specs-category">
+                    <h3><span class="category-icon"></span> Задняя подвеска</h3>
+                    <div class="specs-grid">
+                        <div class="spec-detail">
+                            <div class="detail-label">Тип</div>
+                            <div class="detail-value">Pull-rod (тянущая штанга)</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Конструкция</div>
+                            <div class="detail-value">Двойные поперечные рычаги</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Элементы</div>
+                            <div class="detail-value">Торсионные</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Амортизаторы</div>
+                            <div class="detail-value">Гидравлические</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="specs-category">
+                    <h3><span class="category-icon"></span> Рулевое управление</h3>
+                    <div class="specs-grid">
+                        <div class="spec-detail">
+                            <div class="detail-label">Тип</div>
+                            <div class="detail-value">Электро-гидравлическое</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Передаточное отношение</div>
+                            <div class="detail-value">Регулируемое</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="specs-category">
+                    <h3><span class="category-icon"></span> Тормозная система</h3>
+                    <div class="specs-grid">
+                        <div class="spec-detail">
+                            <div class="detail-label">Диски</div>
+                            <div class="detail-value">Углерод-углерод (carbon-carbon)</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Суппорты</div>
+                            <div class="detail-value">Многопоршневые</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Поставщики</div>
+                            <div class="detail-value">Brembo / Carbon Industrie</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Система</div>
+                            <div class="detail-value">Brake-by-wire (на задней оси)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Аэродинамика -->
+    <section id="aero" class="specs-section dark">
+        <div class="container">
+            <h2 class="section-title">
+                Аэродинамика и <span class="section-highlight">колеса</span>
+            </h2>
+            
+            <div class="specs-details">
+                <div class="specs-category">
+                    <h3><span class="category-icon"></span> Аэродинамика McLaren</h3>
+                    <div class="specs-grid">
+                        <div class="spec-detail">
+                            <div class="detail-label">Разработка</div>
+                            <div class="detail-value">Полностью разработана McLaren</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Переднее антикрыло</div>
+                            <div class="detail-value">Многоэлементная геометрия</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Подполье</div>
+                            <div class="detail-value">Venturi-каналы (ground effect)</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Боковые понтоны</div>
+                            <div class="detail-value">Переработанная форма (эволюция 2023)</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Заднее антикрыло</div>
+                            <div class="detail-value">С системой DRS</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">DRS</div>
+                            <div class="detail-value">Активируемая задняя створка</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="specs-category">
+                    <h3><span class="category-icon"></span> Колёса и шины</h3>
+                    <div class="specs-grid">
+                        <div class="spec-detail">
+                            <div class="detail-label">Шины</div>
+                            <div class="detail-value">Pirelli (спецификация 2024)</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Диаметр</div>
+                            <div class="detail-value">18 дюймов</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Типы (слики)</div>
+                            <div class="detail-value">C0–C5</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Дождевые</div>
+                            <div class="detail-value">Intermediate, Full Wet</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="specs-category">
+                    <h3><span class="category-icon"></span> Габариты</h3>
+                    <div class="specs-grid">
+                        <div class="spec-detail">
+                            <div class="detail-label">Ширина</div>
+                            <div class="detail-value">2000 мм</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Колёсная база</div>
+                            <div class="detail-value">Адаптирована под аэродинамику</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="specs-category">
+                    <h3><span class="category-icon"></span> Топливо и жидкости</h3>
+                    <div class="specs-grid">
+                        <div class="spec-detail">
+                            <div class="detail-label">Топливо</div>
+                            <div class="detail-value">Petronas (E10, устойчивое топливо FIA)</div>
+                        </div>
+                        <div class="spec-detail">
+                            <div class="detail-label">Смазочные материалы</div>
+                            <div class="detail-value">Petronas Lubricants</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Электроника -->
+    <section id="electronics" class="tech-section">
+        <div class="container">
+            <h2 class="section-title">
+                Электроника и <span class="section-highlight">системы</span>
+            </h2>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon"></div>
+                    <h3>Блок управления</h3>
+                    <p>Стандартный блок управления FIA ECU</p>
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon"></div>
+                    <h3>Телеметрия</h3>
+                    <p>Передача данных в реальном времени</p>
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon"></div>
+                    <h3>Системы контроля</h3>
+                    <p>ERS, тормозов и температуры</p>
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon"></div>
+                    <h3>Термоменеджмент</h3>
+                    <p>Продвинутая система контроля температуры</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контактная форма -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="section-title">
+            Обратная <span class="section-highlight">связь</span>
+        </h2>
+        
+        <form id="telegramForm" class="telegram-form">
+            <div class="form-group">
+                <label for="userName">Ваше имя *</label>
+                <input type="text" id="userName" name="name" required placeholder="Иванов Иван">
+            </div>
+            
+            <div class="form-group">
+                <label for="userEmail">Email *</label>
+                <input type="email" id="userEmail" name="email" required placeholder="example@mail.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="userMessage">Сообщение *</label>
+                <textarea id="userMessage" name="message" rows="4" required 
+                          placeholder="Ваш вопрос или комментарий о McLaren MCL39..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Отправить в Telegram</button>
+        </form>
+        
+        <div id="telegramSuccess" class="success-message" style="display: none;">
+            ✅ Сообщение отправлено! Мы ответим вам в Telegram.
+        </div>
+        
+        <div id="telegramError" class="error-message" style="display: none;">
+            ❌ Ошибка отправки. Попробуйте позже.
+        </div>
+    </div>
+</section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">MCL</div>
+                    <div class="footer-title">McLaren MCL39</div>
+                    <div class="footer-subtitle">2024 Formula 1 Season</div>
+                </div>
+                
+                <div class="footer-tech">
+                    <h4>Ключевые характеристики</h4>
+                    <div class="tech-spec">
+                        <span>Двигатель:</span>
+                        <span>Mercedes PU106C V6</span>
+                    </div>
+                    <div class="tech-spec">
+                        <span>Вес:</span>
+                        <span>798 кг (с пилотом)</span>
+                    </div>
+                    <div class="tech-spec">
+                        <span>Шины:</span>
+                        <span>Pirelli 18"</span>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Технические разделы</h4>
+                    <a href="#main">Общая информация</a>
+                    <a href="#engine">Силовая установка</a>
+                    <a href="#chassis">Шасси</a>
+                    <a href="#aero">Аэродинамика</a>
+                    <a href="#contact">Контакты</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 McLaren Racing Limited. Техническая спецификация болида MCL39.</p>
+                <p class="disclaimer">Все данные соответствуют регламенту FIA Formula One 2024.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
