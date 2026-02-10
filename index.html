@@ -29,6 +29,7 @@
                 <a href="#cars" class="nav-link">Автомобили</a>
                 <a href="#innovations" class="nav-link">Инновации</a>
                 <a href="#stats" class="nav-link">Статистика</a>
+                <a href="#feedback" class="nav-link">Обратная связь</a>
             </div>
             
             <button class="burger-btn" id="burgerBtn" aria-label="Меню">
@@ -45,6 +46,7 @@
             <a href="#cars" class="mobile-link" onclick="closeMenu()">Автомобили</a>
             <a href="#innovations" class="mobile-link" onclick="closeMenu()">Инновации</a>
             <a href="#stats" class="mobile-link" onclick="closeMenu()">Статистика</a>
+            <a href="#feedback" class="mobile-link" onclick="closeMenu()">Обратная связь</a>
         </div>
     </header>
 
@@ -542,6 +544,93 @@
                         <div class="fact-icon">🤝</div>
                         <p>McLaren имеет самую длительное партнерство в Ф1: с TAG Heuer (с 1985) и с Mercedes (с 1995, с перерывом 2009-2014).</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма обратной связи -->
+    <section id="feedback" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                Обратная <span class="section-highlight">связь</span>
+            </h2>
+            <p class="form-description">
+                Есть вопросы о McLaren? Хотите предложить тему для добавления на сайт?
+                Напишите нам, и мы обязательно ответим!
+            </p>
+            
+            <form id="feedbackForm" class="feedback-form">
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="feedbackName">Ваше имя *</label>
+                        <input type="text" id="feedbackName" name="name" required 
+                               placeholder="Как к вам обращаться?">
+                        <div class="error-message" id="nameError"></div>
+                    </div>
+                    
+                    <div class="form-group half">
+                        <label for="feedbackEmail">Ваш email *</label>
+                        <input type="email" id="feedbackEmail" name="email" required 
+                               placeholder="example@mail.com">
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedbackSubject">Тема сообщения</label>
+                    <select id="feedbackSubject" name="subject">
+                        <option value="">Выберите тему</option>
+                        <option value="history">История McLaren</option>
+                        <option value="drivers">Гонщики McLaren</option>
+                        <option value="cars">Автомобили McLaren</option>
+                        <option value="facts">Интересные факты</option>
+                        <option value="suggestion">Предложение по сайту</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedbackMessage">Ваше сообщение *</label>
+                    <textarea id="feedbackMessage" name="message" rows="6" required 
+                              placeholder="Напишите ваше сообщение здесь..."></textarea>
+                    <div class="error-message" id="messageError"></div>
+                </div>
+                
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Получать новости о McLaren на email</label>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Отправить сообщение</span>
+                    <span class="btn-icon">✈️</span>
+                </button>
+            </form>
+            
+            <div id="formSuccess" class="success-message" style="display: none;">
+                <div class="success-icon">✓</div>
+                <div class="success-text">
+                    <h3>Сообщение отправлено!</h3>
+                    <p>Спасибо за ваш отзыв. Мы ответим вам в ближайшее время.</p>
+                </div>
+            </div>
+            
+            <div class="form-info">
+                <div class="info-item">
+                    <div class="info-icon">📧</div>
+                    <h4>Почта для связи</h4>
+                    <p>mclaren.feedback@example.com</p>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">⏱️</div>
+                    <h4>Время ответа</h4>
+                    <p>Обычно отвечаем в течение 24 часов</p>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">🔒</div>
+                    <h4>Конфиденциальность</h4>
+                    <p>Ваши данные защищены и не передаются третьим лицам</p>
                 </div>
             </div>
         </div>
