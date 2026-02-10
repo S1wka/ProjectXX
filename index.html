@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McLaren Racing — История команды, гонщики и автомобили</title>
+    <title>McLaren Racing — Полная история команды, гонщики, автомобили</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏎️</text></svg>">
 </head>
@@ -11,7 +11,7 @@
     <!-- Статичная вывеска -->
     <div class="static-title">
         <div class="static-text">McLaren</div>
-        <div class="static-subtext">Since 1963</div>
+        <div class="static-subtext">1963-2025</div>
     </div>
 
     <!-- Шапка -->
@@ -23,10 +23,12 @@
             </div>
             
             <div class="desktop-menu">
+                <a href="#hero" class="nav-link">Главная</a>
                 <a href="#history" class="nav-link">История</a>
                 <a href="#drivers" class="nav-link">Гонщики</a>
                 <a href="#cars" class="nav-link">Автомобили</a>
-                <a href="#today" class="nav-link">Сегодня</a>
+                <a href="#innovations" class="nav-link">Инновации</a>
+                <a href="#stats" class="nav-link">Статистика</a>
             </div>
             
             <button class="burger-btn" id="burgerBtn" aria-label="Меню">
@@ -37,10 +39,12 @@
         </nav>
         
         <div class="mobile-menu" id="mobileMenu">
+            <a href="#hero" class="mobile-link" onclick="closeMenu()">Главная</a>
             <a href="#history" class="mobile-link" onclick="closeMenu()">История</a>
             <a href="#drivers" class="mobile-link" onclick="closeMenu()">Гонщики</a>
             <a href="#cars" class="mobile-link" onclick="closeMenu()">Автомобили</a>
-            <a href="#today" class="mobile-link" onclick="closeMenu()">Сегодня</a>
+            <a href="#innovations" class="mobile-link" onclick="closeMenu()">Инновации</a>
+            <a href="#stats" class="mobile-link" onclick="closeMenu()">Статистика</a>
         </div>
     </header>
 
@@ -48,13 +52,30 @@
     <section id="hero" class="hero">
         <div class="container hero-content">
             <h1 class="hero-title">McLaren <span class="hero-highlight">Racing</span></h1>
-            <p class="hero-subtitle">Легенда Формулы 1 с 1963 года</p>
+            <p class="hero-subtitle">Легенда автоспорта • 60+ лет истории • 183 победы в Ф1</p>
             <p class="hero-description">
-                От скромных новозеландских корней до вершины автоспорта. 
-                Команда, определившая ход истории гонок, с 8 чемпионами мира 
-                и революционными технологическими решениями.
+                Основанная в 1963 году новозеландским гонщиком Брюсом Маклареном, команда выросла 
+                в одну из самых успешных и инновационных в истории автоспорта. 13 титулов чемпионов мира, 
+                10 кубков конструкторов и бесчисленные технологические прорывы.
             </p>
-            <button class="hero-btn" onclick="scrollToSection('history')">Исследовать историю</button>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">183</div>
+                    <div class="stat-label">Побед в Ф1</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">486</div>
+                    <div class="stat-label">Подиумов</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">13</div>
+                    <div class="stat-label">Титулов пилотов</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Кубков конструкторов</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -62,219 +83,301 @@
     <section id="history" class="section dark">
         <div class="container">
             <h2 class="section-title">
-                История <span class="section-highlight">команды</span>
+                Подробная <span class="section-highlight">история</span>
             </h2>
             
-            <div class="history-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">1963</div>
-                    <div class="timeline-content">
-                        <h3>Основание</h3>
-                        <p>Новозеландский гонщик Брюс Макларен и американец Тедди Майер основывают Bruce McLaren Motor Racing Ltd.</p>
-                    </div>
+            <div class="history-content">
+                <div class="history-block">
+                    <h3>1963-1970: Основание и ранние годы</h3>
+                    <p>Брюс Макларен основал Bruce McLaren Motor Racing Ltd в 1963 году. Уже в 1966 команда дебютировала в Формуле 1. В 1968 году Брюс одержал первую победу команды в Ф1 на Гран-при Бельгии.</p>
+                    <p><strong>Трагический поворот:</strong> 2 июня 1970 года Брюс Макларен погиб во время тестов на трассе Гудвуд. Его наследие продолжили партнеры Тедди Майер и Фил Керр.</p>
                 </div>
                 
-                <div class="timeline-item">
-                    <div class="timeline-year">1966</div>
-                    <div class="timeline-content">
-                        <h3>Дебют в Формуле 1</h3>
-                        <p>Команда дебютирует в королевском классе автогонок на Гран-при Монако.</p>
-                    </div>
+                <div class="history-block">
+                    <h3>1970-1980: Первые чемпионские титулы</h3>
+                    <p>В 1974 году бразилец Эмерсон Фиттипальди принес команде первый чемпионский титул. В 1976 году британец Джеймс Хант в драматичной борьбе с Ники Лаудой завоевал второй титул.</p>
+                    <p><strong>Интересный факт:</strong> Джеймс Хант выиграл титул, опередив Лауду всего на 1 очко после культовой гонки в Фудзи, Япония, где Лауда сошел из-за ужасных погодных условий.</p>
                 </div>
                 
-                <div class="timeline-item">
-                    <div class="timeline-year">1968</div>
-                    <div class="timeline-content">
-                        <h3>Первая победа в Ф1</h3>
-                        <p>Брюс Макларен одерживает первую победу команды в Формуле 1 на Гран-при Бельгии.</p>
-                    </div>
+                <div class="history-block">
+                    <h3>1981-1993: Эра Рона Денниса и абсолютное доминирование</h3>
+                    <p>В 1981 году McLaren объединилась с Project Four Рона Денниса. Это положило начало самой успешной эпохе. В 1984 году McLaren выиграла 12 из 16 гонок сезона.</p>
+                    <p><strong>Пиковое доминирование:</strong> В 1988 году McLaren MP4/4 с двигателем Honda выиграл 15 из 16 гонок сезона — рекорд, который не побит до сих пор. Айртон Сенна и Ален Прост принесли команде 4 титула подряд (1988-1991).</p>
                 </div>
                 
-                <div class="timeline-item">
-                    <div class="timeline-year">1970</div>
-                    <div class="timeline-content">
-                        <h3>Трагическая потеря</h3>
-                        <p>Брюс Макларен погибает во время тестовых заездов на трассе Гудвуд. Его наследие продолжает жить.</p>
-                    </div>
+                <div class="history-block">
+                    <h3>1994-2006: Эра Mercedes и чемпионство Хаккинена</h3>
+                    <p>В 1995 году McLaren начала партнерство с Mercedes-Benz, которое продолжается до сих пор. Финн Мика Хаккинен выиграл два титула подряд в 1998 и 1999 годах.</p>
+                    <p><strong>Знаковый момент:</strong> В 1998 году Хаккинен и Дэвид Култхард выиграли для McLaren первый Кубок конструкторов за 8 лет.</p>
                 </div>
                 
-                <div class="timeline-item">
-                    <div class="timeline-year">1974</div>
-                    <div class="timeline-content">
-                        <h3>Первый чемпионский титул</h3>
-                        <p>Эмерсон Фиттипальди приносит команде первый титул чемпиона мира. McLaren также выигрывает Кубок конструкторов.</p>
-                    </div>
+                <div class="history-block">
+                    <h3>2007-2012: Возвращение к победам и Хэмилтон</h3>
+                    <p>В 2007 году новичок Льюис Хэмилтон едва не выиграл титул в своем дебютном сезоне. В 2008 он все же стал чемпионом, опередив Фелипе Массу на последнем круге последней гонки.</p>
+                    <p><strong>Драма в Бразилии:</strong> Хэмилтон стал чемпионом на последнем повороте последнего круга Гран-при Бразилии 2008 года, обойдя Тимо Глока на 5-м месте, что дало ему необходимое 5-е место для титула.</p>
                 </div>
                 
-                <div class="timeline-item">
-                    <div class="timeline-year">1981</div>
-                    <div class="timeline-content">
-                        <h3>Новая эра</h3>
-                        <p>Объединение с Project Four Рона Денниса. Начало самой успешной эпохи в истории команды.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-year">1988</div>
-                    <div class="timeline-content">
-                        <h3>Абсолютное доминирование</h3>
-                        <p>Айртон Сенна и Ален Прост выигрывают 15 из 16 гонок сезона на революционном McLaren MP4/4.</p>
-                    </div>
+                <div class="history-block">
+                    <h3>2013-2025: Современная эпоха</h3>
+                    <p>После сложного периода команда под руководством Андреа Стеллы возродилась. В 2023 году McLaren стала самой прогрессирующей командой сезона, выиграв 9 подиумов после слабого начала.</p>
+                    <p><strong>Текущий состав:</strong> Ландо Норрис и Оскар Пиастри формируют один из самых перспективных дуэтов на сетке. В 2024 году Норрис одержал свою первую победу в Майами.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Легендарные гонщики -->
+    <!-- Гонщики -->
     <section id="drivers" class="section">
         <div class="container">
             <h2 class="section-title">
-                Легендарные <span class="section-highlight">гонщики</span>
+                Все чемпионы <span class="section-highlight">McLaren</span>
             </h2>
             
             <div class="drivers-grid">
                 <div class="driver-card">
-                    <div class="driver-header">
-                        <div class="driver-name">Брюс Макларен</div>
-                        <div class="driver-years">1966-1970</div>
+                    <div class="driver-image" style="background: linear-gradient(135deg, #ff5800, #ff8c00);">
+                        <div class="driver-number">1</div>
                     </div>
-                    <div class="driver-stats">
-                        <div class="stat">
-                            <span class="stat-label">Побед в Ф1:</span>
-                            <span class="stat-value">4</span>
+                    <div class="driver-info">
+                        <div class="driver-name">Эмерсон Фиттипальди</div>
+                        <div class="driver-years">1974</div>
+                        <div class="driver-stats">
+                            <div class="stat">3 победы в сезоне</div>
+                            <div class="stat">55 очков</div>
+                            <div class="stat">Первый титул McLaren</div>
                         </div>
-                        <div class="stat">
-                            <span class="stat-label">Роль:</span>
-                            <span class="stat-value">Основатель и гонщик</span>
-                        </div>
+                        <p class="driver-desc">Бразилец выиграл первый чемпионский титул для McLaren в 1974 году, также принеся команде первый Кубок конструкторов.</p>
                     </div>
-                    <p class="driver-desc">Основатель команды, пионер автогонок и талантливый инженер.</p>
                 </div>
                 
                 <div class="driver-card">
-                    <div class="driver-header">
-                        <div class="driver-name">Айртон Сенна</div>
-                        <div class="driver-years">1988-1993</div>
+                    <div class="driver-image" style="background: linear-gradient(135deg, #ff5800, #ff8c00);">
+                        <div class="driver-number">2</div>
                     </div>
-                    <div class="driver-stats">
-                        <div class="stat">
-                            <span class="stat-label">Чемпионских титулов:</span>
-                            <span class="stat-value">3</span>
+                    <div class="driver-info">
+                        <div class="driver-name">Джеймс Хант</div>
+                        <div class="driver-years">1976</div>
+                        <div class="driver-stats">
+                            <div class="stat">6 побед в сезоне</div>
+                            <div class="stat">69 очков</div>
+                            <div class="stat">Драма с Ники Лаудой</div>
                         </div>
-                        <div class="stat">
-                            <span class="stat-label">Побед за McLaren:</span>
-                            <span class="stat-value">35</span>
-                        </div>
+                        <p class="driver-desc">Британский гонщик, известный своим ярким стилем жизни. Выиграл титул в драматичном сезоне 1976 года.</p>
                     </div>
-                    <p class="driver-desc">Легендарный бразилец, чье соперничество с Простом стало частью истории Ф1.</p>
                 </div>
                 
                 <div class="driver-card">
-                    <div class="driver-header">
+                    <div class="driver-image" style="background: linear-gradient(135deg, #000000, #ff0000);">
+                        <div class="driver-number">3</div>
+                    </div>
+                    <div class="driver-info">
                         <div class="driver-name">Ален Прост</div>
-                        <div class="driver-years">1984-1989</div>
-                    </div>
-                    <div class="driver-stats">
-                        <div class="stat">
-                            <span class="stat-label">Чемпионских титулов:</span>
-                            <span class="stat-value">3</span>
+                        <div class="driver-years">1985, 1986, 1989</div>
+                        <div class="driver-stats">
+                            <div class="stat">30 побед за McLaren</div>
+                            <div class="stat">3 титула</div>
+                            <div class="stat">"Профессор" тактики</div>
                         </div>
-                        <div class="stat">
-                            <span class="stat-label">Побед за McLaren:</span>
-                            <span class="stat-value">30</span>
-                        </div>
+                        <p class="driver-desc">Французский гонщик, известный своим интеллектуальным подходом к гонкам. Выиграл 3 титула с McLaren.</p>
                     </div>
-                    <p class="driver-desc">«Профессор» – тактический гений, один из самых успешных пилотов в истории.</p>
                 </div>
                 
                 <div class="driver-card">
-                    <div class="driver-header">
+                    <div class="driver-image" style="background: linear-gradient(135deg, #0066cc, #ffcc00);">
+                        <div class="driver-number">4</div>
+                    </div>
+                    <div class="driver-info">
+                        <div class="driver-name">Айртон Сенна</div>
+                        <div class="driver-years">1988, 1990, 1991</div>
+                        <div class="driver-stats">
+                            <div class="stat">35 побед за McLaren</div>
+                            <div class="stat">3 титула</div>
+                            <div class="stat">Легенда дождя</div>
+                        </div>
+                        <p class="driver-desc">Бразильская легенда, считающийся одним из величайших гонщиков всех времен. Его соперничество с Простом стало легендарным.</p>
+                    </div>
+                </div>
+                
+                <div class="driver-card">
+                    <div class="driver-image" style="background: linear-gradient(135deg, #000000, #cccccc);">
+                        <div class="driver-number">5</div>
+                    </div>
+                    <div class="driver-info">
                         <div class="driver-name">Мика Хаккинен</div>
-                        <div class="driver-years">1993-2001</div>
-                    </div>
-                    <div class="driver-stats">
-                        <div class="stat">
-                            <span class="stat-label">Чемпионских титулов:</span>
-                            <span class="stat-value">2</span>
+                        <div class="driver-years">1998, 1999</div>
+                        <div class="driver-stats">
+                            <div class="stat">20 побед за McLaren</div>
+                            <div class="stat">2 титула подряд</div>
+                            <div class="stat">"Летучий финн"</div>
                         </div>
-                        <div class="stat">
-                            <span class="stat-label">Побед за McLaren:</span>
-                            <span class="stat-value">20</span>
-                        </div>
+                        <p class="driver-desc">Финский гонщик, возродивший чемпионские традиции McLaren в конце 1990-х годов.</p>
                     </div>
-                    <p class="driver-desc">«Летучий финн», возродивший чемпионские традиции McLaren в конце 1990-х.</p>
                 </div>
                 
                 <div class="driver-card">
-                    <div class="driver-header">
+                    <div class="driver-image" style="background: linear-gradient(135deg, #ff0000, #000000);">
+                        <div class="driver-number">6</div>
+                    </div>
+                    <div class="driver-info">
                         <div class="driver-name">Льюис Хэмилтон</div>
-                        <div class="driver-years">2007-2012</div>
-                    </div>
-                    <div class="driver-stats">
-                        <div class="stat">
-                            <span class="stat-label">Чемпионских титулов:</span>
-                            <span class="stat-value">1 (с McLaren)</span>
+                        <div class="driver-years">2008</div>
+                        <div class="driver-stats">
+                            <div class="stat">21 победа за McLaren</div>
+                            <div class="stat">1 титул с McLaren</div>
+                            <div class="stat">Дебютант-чемпион</div>
                         </div>
-                        <div class="stat">
-                            <span class="stat-label">Побед за McLaren:</span>
-                            <span class="stat-value">21</span>
-                        </div>
+                        <p class="driver-desc">Самый успешный пилот в истории Ф1. Свой первый титул завоевал с McLaren в 2008 году.</p>
                     </div>
-                    <p class="driver-desc">Самый успешный пилот в истории Ф1, свой первый титул завоевал с McLaren.</p>
+                </div>
+            </div>
+            
+            <div class="other-drivers">
+                <h3>Другие знаменитые гонщики McLaren</h3>
+                <div class="drivers-list">
+                    <div class="driver-item">Денни Халм (чемпион 1967 года, выступал за McLaren в Формуле 1 и Can-Am)</div>
+                    <div class="driver-item">Джоди Шектер (чемпион 1979 года, выступал за McLaren в начале карьеры)</div>
+                    <div class="driver-item">Кеке Росберг (чемпион 1982 года, выступал за McLaren в 1986)</div>
+                    <div class="driver-item">Дэвид Култхард (13 побед за McLaren, вице-чемпион 2001)</div>
+                    <div class="driver-item">Кими Райкконен (дебютировал за McLaren, вице-чемпион 2003, 2005)</div>
+                    <div class="driver-item">Фернандо Алонсо (выступал за McLaren в 2007, 2015-2018)</div>
+                    <div class="driver-item">Ландо Норрис (7+ подиумов, первая победа в 2024)</div>
+                    <div class="driver-item">Оскар Пиастри (Новичок года 2023, 2+ подиума)</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Знаковые автомобили -->
+    <!-- Автомобили -->
     <section id="cars" class="section dark">
         <div class="container">
             <h2 class="section-title">
                 Знаковые <span class="section-highlight">автомобили</span>
             </h2>
             
-            <div class="cars-grid">
-                <div class="car-card">
-                    <div class="car-image" style="background: linear-gradient(135deg, rgba(255,88,0,0.2), rgba(0,0,0,0.8));">
-                        <div class="car-model">McLaren F1</div>
-                    </div>
-                    <div class="car-info">
-                        <h3>McLaren F1 (1992-1998)</h3>
-                        <p>Легендарный дорожный гиперкар. Был самым быстрым серийным автомобилем в мире (386 км/ч), с центральным расположением водителя и атмосферным двигателем BMW V12.</p>
+            <div class="cars-tabs">
+                <div class="tabs">
+                    <button class="tab active" onclick="openTab('f1')">McLaren F1</button>
+                    <button class="tab" onclick="openTab('mp4')">MP4/4</button>
+                    <button class="tab" onclick="openTab('mp41')">MP4/1</button>
+                    <button class="tab" onclick="openTab('modern')">Современные</button>
+                </div>
+                
+                <div id="f1" class="tab-content active">
+                    <div class="car-detail">
+                        <div class="car-image-large">
+                            <div class="car-title">McLaren F1</div>
+                            <div class="car-years">1992-1998</div>
+                        </div>
                         <div class="car-specs">
-                            <span class="spec">Двигатель: 6.1L V12</span>
-                            <span class="spec">Мощность: 627 л.с.</span>
-                            <span class="spec">Тираж: 106 экз.</span>
+                            <h3>Технические характеристики</h3>
+                            <ul>
+                                <li><strong>Двигатель:</strong> BMW S70/2 6.1L V12 (атмосферный)</li>
+                                <li><strong>Мощность:</strong> 627 л.с. при 7400 об/мин</li>
+                                <li><strong>Крутящий момент:</strong> 651 Н·м при 5600 об/мин</li>
+                                <li><strong>Макс. скорость:</strong> 386 км/ч (рекорд для серийных авто до 2005)</li>
+                                <li><strong>0-100 км/ч:</strong> 3.2 секунды</li>
+                                <li><strong>Вес:</strong> 1138 кг</li>
+                                <li><strong>Тираж:</strong> 106 экземпляров (64 дорожных, 5 LM, 5 GT, 28 GTR)</li>
+                            </ul>
+                            <h3>Интересные факты</h3>
+                            <p>• Центральное расположение водителя, два пассажирских сиденья сзади по бокам</p>
+                            <p>• Золотое покрытие моторного отсека для лучшего отражения тепла</p>
+                            <p>• Разработка заняла 6 лет, бюджет около $130 млн</p>
+                            <p>• Победа в 24 часах Ле-Мана в 1995 году в классе GT1</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="car-card">
-                    <div class="car-image" style="background: linear-gradient(135deg, rgba(255,88,0,0.2), rgba(0,0,0,0.8));">
-                        <div class="car-model">MP4/4</div>
-                    </div>
-                    <div class="car-info">
-                        <h3>McLaren MP4/4 (1988)</h3>
-                        <p>Один из самых доминирующих болидов в истории Ф1. Айртон Сенна и Ален Прост выиграли на нем 15 из 16 гонок сезона 1988 года.</p>
+                <div id="mp4" class="tab-content">
+                    <div class="car-detail">
+                        <div class="car-image-large">
+                            <div class="car-title">McLaren MP4/4</div>
+                            <div class="car-years">1988</div>
+                        </div>
                         <div class="car-specs">
-                            <span class="spec">Двигатель: Honda RA168E V6</span>
-                            <span class="spec">Мощность: ~650 л.с.</span>
-                            <span class="spec">Побед в сезоне: 15 из 16</span>
+                            <h3>Технические характеристики</h3>
+                            <ul>
+                                <li><strong>Двигатель:</strong> Honda RA168E 1.5L V6 Turbo</li>
+                                <li><strong>Мощность:</strong> 650-680 л.с. (в квалификации до 1000+ л.с.)</li>
+                                <li><strong>Турбо:</strong> Twin-turbo с системой контроля наддува</li>
+                                <li><strong>Вес:</strong> 540 кг (минимум по регламенту)</li>
+                                <li><strong>Побед в сезоне:</strong> 15 из 16 (93.75%)</li>
+                                <li><strong>Поул-позиций:</strong> 15 из 16</li>
+                                <li><strong>Быстрых кругов:</strong> 10</li>
+                            </ul>
+                            <h3>Достижения и факты</h3>
+                            <p>• Самый доминирующий сезон в истории Ф1 (рекорд по % побед)</p>
+                            <p>• Сенна выиграл 8 гонок, Прост — 7</p>
+                            <p>• Единственное поражение в сезоне — Гран-при Италии (ДСП Сенны)</p>
+                            <p>• Аэродинамика разработана под руководством Гордона Маррея</p>
+                            <p>• Низкий профиль шасси позволил использовать более эффективные диффузоры</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="car-card">
-                    <div class="car-image" style="background: linear-gradient(135deg, rgba(255,88,0,0.2), rgba(0,0,0,0.8));">
-                        <div class="car-model">MP4/1</div>
-                    </div>
-                    <div class="car-info">
-                        <h3>McLaren MP4/1 (1981)</h3>
-                        <p>Революционный болид, ставший первым в Формуле 1 с цельнокарбоновым монококом. Эта инновация задала новый стандарт прочности и безопасности.</p>
+                <div id="mp41" class="tab-content">
+                    <div class="car-detail">
+                        <div class="car-image-large">
+                            <div class="car-title">McLaren MP4/1</div>
+                            <div class="car-years">1981</div>
+                        </div>
                         <div class="car-specs">
-                            <span class="spec">Материал: Карбоновый монокок</span>
-                            <span class="spec">Инновация: Безопасность</span>
-                            <span class="spec">Эпоха: Начало 80-х</span>
+                            <h3>Технические характеристики</h3>
+                            <ul>
+                                <li><strong>Материал шасси:</strong> Углепластиковый монокок</li>
+                                <li><strong>Двигатель:</strong> Ford Cosworth DFV 3.0L V8 (атмосферный)</li>
+                                <li><strong>Мощность:</strong> 510 л.с.</li>
+                                <li><strong>Вес:</strong> 585 кг</li>
+                                <li><strong>Конструктор:</strong> Джон Барнард</li>
+                                <li><strong>Дебют:</strong> Гран-при Аргентины 1981</li>
+                                <li><strong>Первая победа:</strong> Гран-при Британии 1981 (Джон Уотсон)</li>
+                            </ul>
+                            <h3>Историческое значение</h3>
+                            <p>• Первый автомобиль Формулы 1 с цельнокарбоновым монококом</p>
+                            <p>• Революция в безопасности: монокок выдерживал нагрузки в 5 раз больше алюминиевого</p>
+                            <p>• В 1981 году Джон Уотсон выжил в страшной аварии в Монце благодаря прочности карбона</p>
+                            <p>• За 2 года все топ-команды перешли на карбоновые шасси</p>
+                            <p>• Начало эры высоких технологий в Формуле 1</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="modern" class="tab-content">
+                    <div class="car-detail">
+                        <div class="car-image-large">
+                            <div class="car-title">Современные гиперкары</div>
+                            <div class="car-years">2011-Настоящее время</div>
+                        </div>
+                        <div class="car-specs">
+                            <h3>McLaren P1 (2013-2015)</h3>
+                            <ul>
+                                <li><strong>Двигатель:</strong> 3.8L V8 Twin-turbo + электромотор</li>
+                                <li><strong>Мощность:</strong> 916 л.с. (727 ДВС + 179 электромотор)</li>
+                                <li><strong>0-100 км/ч:</strong> 2.8 секунды</li>
+                                <li><strong>Макс. скорость:</strong> 350 км/ч</li>
+                                <li><strong>Тираж:</strong> 375 экземпляров</li>
+                                <li><strong>Особенность:</strong> Активная аэродинамика, режим E-mode</li>
+                            </ul>
+                            
+                            <h3>McLaren Senna (2018-2020)</h3>
+                            <ul>
+                                <li><strong>Двигатель:</strong> 4.0L V8 Twin-turbo (M840TR)</li>
+                                <li><strong>Мощность:</strong> 800 л.с.</li>
+                                <li><strong>0-100 км/ч:</strong> 2.8 секунды</li>
+                                <li><strong>Прижимная сила:</strong> 800 кг при 250 км/ч</li>
+                                <li><strong>Тираж:</strong> 500 экземпляров</li>
+                                <li><strong>Особенность:</strong> Посвящен Айртону Сенне, экстремальная аэродинамика</li>
+                            </ul>
+                            
+                            <h3>McLaren Speedtail (2020-2022)</h3>
+                            <ul>
+                                <li><strong>Двигатель:</strong> 4.0L V8 Twin-turbo + гибридная система</li>
+                                <li><strong>Мощность:</strong> 1050 л.с.</li>
+                                <li><strong>Макс. скорость:</strong> 403 км/ч (ограничена электроникой)</li>
+                                <li><strong>0-300 км/ч:</strong> 12.8 секунды</li>
+                                <li><strong>Тираж:</strong> 106 экземпляров (как F1)</li>
+                                <li><strong>Особенность:</strong> 3-местная компоновка как у F1, каплевидный кузов</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -282,42 +385,163 @@
         </div>
     </section>
 
-    <!-- McLaren сегодня -->
-    <section id="today" class="section">
+    <!-- Инновации -->
+    <section id="innovations" class="section">
         <div class="container">
             <h2 class="section-title">
-                McLaren <span class="section-highlight">сегодня</span>
+                Технологические <span class="section-highlight">инновации</span>
             </h2>
             
-            <div class="today-grid">
-                <div class="today-card">
-                    <div class="today-icon">🏆</div>
-                    <h3>Достижения</h3>
-                    <ul class="today-list">
-                        <li><strong>13 титулов</strong> чемпиона мира среди пилотов</li>
-                        <li><strong>10 Кубков</strong> конструкторов</li>
-                        <li><strong>183 победы</strong> в Гран-при Формулы 1</li>
-                        <li><strong>486 подиумов</strong> за всю историю</li>
-                    </ul>
+            <div class="innovations-grid">
+                <div class="innovation-card">
+                    <div class="innovation-icon">🏗️</div>
+                    <h3>Карбоновый монокок (1981)</h3>
+                    <p>MP4/1 стал первым автомобилем Ф1 с цельнокарбоновым монококом. Это повысило прочность на 300% и спасло жизни многих гонщиков.</p>
+                    <div class="innovation-fact">В 1981 году авария Джона Уотсона в Монце доказала превосходство карбона над алюминием.</div>
                 </div>
                 
-                <div class="today-card">
-                    <div class="today-icon">👥</div>
-                    <h3>Текущий состав (2026)</h3>
-                    <ul class="today-list">
-                        <li><strong>Руководитель команды:</strong> Андреа Стелла</li>
-                        <li><strong>CEO:</strong> Зак Браун</li>
-                        <li><strong>Пилоты:</strong> Ландо Норрис и Оскар Пиастри</li>
-                        <li><strong>Двигатель:</strong> Mercedes</li>
-                        <li><strong>Шасси:</strong> McLaren MCL40</li>
-                    </ul>
+                <div class="innovation-card">
+                    <div class="innovation-icon">🌀</div>
+                    <h3>Активная подвеска (1993)</h3>
+                    <p>MP4/8 первой использовала активную подвеску, которая автоматически регулировала клиренс и жесткость в зависимости от условий.</p>
+                    <div class="innovation-fact">Система использовала гидравлические приводы и могла делать 1000 корректировок в секунду.</div>
                 </div>
                 
-                <div class="today-card">
-                    <div class="today-icon">🏁</div>
-                    <h3>Наследие и будущее</h3>
-                    <p>Команда продолжает оставаться одним из столпов Формулы 1, сочетая богатую историю с инновационным подходом к технологиям и гонкам.</p>
-                    <p>McLaren также успешно развивает дорожное автомобильное подразделение, выпуская гиперкары, такие как P1, Senna и Speedtail.</p>
+                <div class="innovation-card">
+                    <div class="innovation-icon">💨</div>
+                    <h3>Система торможения без блокировки (1998)</h3>
+                    <p>McLaren первой применила в Ф1 сложную электронную систему ABS, которая значительно улучшила торможение.</p>
+                    <div class="innovation-fact">Система стала ключевым фактором в чемпионских сезонах Хаккинена 1998-1999.</div>
+                </div>
+                
+                <div class="innovation-card">
+                    <div class="innovation-icon">🔄</div>
+                    <h3>Карбон-керамические тормоза (1997)</h3>
+                    <p>MP4/12 первой в Ф1 использовала карбон-керамические тормозные диски, которые были легче и эффективнее стальных.</p>
+                    <div class="innovation-fact">Новые тормоза выдерживали температуры до 1200°C без потери эффективности.</div>
+                </div>
+                
+                <div class="innovation-card">
+                    <div class="innovation-icon">📡</div>
+                    <h3>Двухсторонняя телеметрия (1990-е)</h3>
+                    <p>McLaren разработала систему, позволяющую не только получать данные с автомобиля, но и вносить изменения в настройки во время гонки.</p>
+                    <div class="innovation-fact">Инженеры могли менять 50+ параметров автомобиля дистанционно во время гонки.</div>
+                </div>
+                
+                <div class="innovation-card">
+                    <div class="innovation-icon">⚡</div>
+                    <h3>Кинетическая система рекуперации энергии (KERS) (2009)</h3>
+                    <p>McLaren была пионером в разработке и внедрении KERS, который позже эволюционировал в современные гибридные системы Ф1.</p>
+                    <div class="innovation-fact">Первая система KERS добавляла 80 л.с. на 6.7 секунд за круг.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Статистика -->
+    <section id="stats" class="section dark">
+        <div class="container">
+            <h2 class="section-title">
+                Полная <span class="section-highlight">статистика</span>
+            </h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Общая статистика в Формуле 1</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Первый Гран-при:</span>
+                        <span class="stat-value">Монако 1966</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Всего Гран-при:</span>
+                        <span class="stat-value">950+</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Побед:</span>
+                        <span class="stat-value">183</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Поул-позиций:</span>
+                        <span class="stat-value">156</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Быстрых кругов:</span>
+                        <span class="stat-value">161</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Подиумов:</span>
+                        <span class="stat-value">486</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Очков:</span>
+                        <span class="stat-value">6150.5+</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>Чемпионские титулы</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Чемпионы мира (пилоты):</span>
+                        <span class="stat-value">13</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Кубки конструкторов:</span>
+                        <span class="stat-value">10</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Годы титулов пилотов:</span>
+                        <span class="stat-value">1974, 1976, 1984, 1985, 1986, 1988, 1989, 1990, 1991, 1998, 1999, 2008</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Годы Кубков конструкторов:</span>
+                        <span class="stat-value">1974, 1984, 1985, 1988, 1989, 1990, 1991, 1998</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>Рекорды и достижения</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Самый успешный сезон:</span>
+                        <span class="stat-value">1988 (15 побед из 16)</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Самая длинная серия побед:</span>
+                        <span class="stat-value">11 (1988, Япония 1988 - Канада 1989)</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Лучший % побед в сезоне:</span>
+                        <span class="stat-value">93.75% (1988)</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Больше всего побед за McLaren:</span>
+                        <span class="stat-value">Айртон Сенна (35)</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Больше всего поулов за McLaren:</span>
+                        <span class="stat-value">Айртон Сенна (46)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="interesting-facts">
+                <h3>Интересные факты о McLaren</h3>
+                <div class="facts-grid">
+                    <div class="fact">
+                        <div class="fact-icon">🎨</div>
+                        <p>Знаменитая оранжевая окраска McLaren происходит от цвета национальной команды Новой Зеландии, родины Брюса Макларена.</p>
+                    </div>
+                    <div class="fact">
+                        <div class="fact-icon">🏆</div>
+                        <p>McLaren — единственная команда, выигравшая чемпионат мира в Формуле 1, Инди-500 и 24 часа Ле-Мана (так называемая "троичная корона" автоспорта).</p>
+                    </div>
+                    <div class="fact">
+                        <div class="fact-icon">💼</div>
+                        <p>Технологический центр McLaren в Уокинге спроектировал знаменитый архитектор Норман Фостер и обошелся в £300 млн.</p>
+                    </div>
+                    <div class="fact">
+                        <div class="fact-icon">🤝</div>
+                        <p>McLaren имеет самую длительное партнерство в Ф1: с TAG Heuer (с 1985) и с Mercedes (с 1995, с перерывом 2009-2014).</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -330,37 +554,28 @@
                 <div class="footer-logo">
                     <div class="logo-icon">M</div>
                     <div class="footer-title">McLaren Racing</div>
-                    <div class="footer-subtitle">Легенда автоспорта с 1963 года</div>
+                    <div class="footer-subtitle">Полная энциклопедия команды</div>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Разделы</h4>
-                    <a href="#history">История команды</a>
-                    <a href="#drivers">Легендарные гонщики</a>
-                    <a href="#cars">Знаковые автомобили</a>
-                    <a href="#today">McLaren сегодня</a>
+                    <h4>Источники информации</h4>
+                    <a href="https://en.wikipedia.org/wiki/McLaren" target="_blank">Wikipedia: McLaren</a>
+                    <a href="https://www.mclaren.com/racing/" target="_blank">Официальный сайт McLaren</a>
+                    <a href="https://www.statsf1.com/en/mclaren.aspx" target="_blank">Статистика McLaren</a>
+                    <a href="https://www.formula1.com" target="_blank">Официальный сайт Ф1</a>
                 </div>
                 
-                <div class="footer-info">
-                    <h4>Статистика</h4>
-                    <div class="footer-stat">
-                        <span>Основана:</span>
-                        <span>1963 год</span>
-                    </div>
-                    <div class="footer-stat">
-                        <span>Первый Гран-при:</span>
-                        <span>Монако 1966</span>
-                    </div>
-                    <div class="footer-stat">
-                        <span>Всего Гран-при:</span>
-                        <span>950+</span>
-                    </div>
+                <div class="footer-updated">
+                    <h4>Информация обновлена</h4>
+                    <div class="update-date">Март 2025</div>
+                    <p>Данные включают статистику до конца сезона 2024</p>
+                    <p>Следующее обновление: после сезона 2025</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>© 2025 McLaren Racing Heritage. Информационный сайт о истории команды.</p>
-                <p class="disclaimer">Информация основана на открытых источниках, включая Википедию и официальные материалы McLaren.</p>
+                <p>© 1963-2025 McLaren Racing. Все права на логотипы и бренды принадлежат McLaren Group.</p>
+                <p class="disclaimer">Этот сайт является фанатским проектом и не аффилирован с McLaren Racing. Информация собрана из открытых источников.</p>
             </div>
         </div>
     </footer>
