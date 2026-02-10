@@ -1,158 +1,116 @@
-// ========== КОНСТАНТЫ ==========
-const BOT_TOKEN = '8533113122:AAHeLcL7gMkRgj_RjWdwKh1V8L3RBH12O-8'; // Токен бота Telegram
-const CHAT_ID = '5059538801'; // ID чата для отправки сообщений
-const burgerBtn = document.getElementById('burgerBtn'); // Кнопка бургер-меню
-const mobileMenu = document.getElementById('mobileMenu'); // Мобильное меню
+// Добавьте этот код в конец существующего файла script.js
 
-// Мобильное меню
-const burgerBtn = document.getElementById('burgerBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-
-if (burgerBtn && mobileMenu) {
-    burgerBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-        const spans = burgerBtn.querySelectorAll('span');
-        if (mobileMenu.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-        } else {
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        }
+// Функция для переключения вкладок автомобилей
+function openTab(tabName) {
+    // Скрыть все вкладки
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(tab => {
+        tab.classList.remove('active');
     });
-}
-
-function closeMenu() {
-    if (mobileMenu) mobileMenu.classList.remove('active');
-    if (burgerBtn) {
-        const spans = burgerBtn.querySelectorAll('span');
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
-    }
-}
-
-// Плавная прокрутка
-function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-        section.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start'
-        });
-        closeMenu();
-    }
-}
-
-// Подсветка активного раздела при скролле
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link, .mobile-link');
-
-function updateActiveNav() {
-    let current = '';
-    const scrollPos = window.scrollY + 150;
     
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
+    // Убрать активный класс у всех кнопок
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // Показать выбранную вкладку
+    document.getElementById(tabName).classList.add('active');
+    
+    // Активировать соответствующую кнопку
+    event.currentTarget.classList.add('active');
+}
+
+// Анимация для статистических карточек
+function animateStats() {
+    const stats = document.querySelectorAll('.stat-card, .innovation-card, .fact');
+    stats.forEach((stat, index) => {
+        stat.style.opacity = '0';
+        stat.style.transform = 'translateY(30px)';
+        stat.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
         
-        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        const href = link.getAttribute('href');
-        if (href && href.includes(current)) {
-            link.classList.add('active');
-        }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        observer.observe(stat);
     });
 }
 
-window.addEventListener('scroll', updateActiveNav);
-
-// Анимация элементов при скролле
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+// Функция для подсчета статистики с анимацией
+function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    counters.forEach(counter => {
+        const target = parseInt(counter.textContent);
+        let current = 0;
+        const increment = target / 100;
+        const updateCounter = () => {
+            if (current < target) {
+                current += increment;
+                counter.textContent = Math.ceil(current);
+                setTimeout(updateCounter, 20);
+            } else {
+                counter.textContent = target;
+            }
+        };
+        
+        // Запускаем анимацию когда элемент появляется в viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    updateCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(counter);
     });
-}, observerOptions);
+}
 
-// Применяем анимации к карточкам и элементам timeline
+// Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
-    // Анимация для карточек гонщиков, автомобилей и блоков "сегодня"
-    document.querySelectorAll('.driver-card, .car-card, .today-card, .timeline-item').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+    // Инициализация вкладок
+    const defaultTab = document.querySelector('.tab.active');
+    if (defaultTab) {
+        const tabId = defaultTab.getAttribute('onclick').match(/'([^']+)'/)[1];
+        document.getElementById(tabId).classList.add('active');
+    }
+    
+    // Анимация статистических карточек
+    animateStats();
+    
+    // Анимация счетчиков (опционально, можно включить если нужно)
+    // animateCounters();
+    
+    // Добавляем обработчики для вкладок
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const tabName = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+            openTab(tabName);
+        });
     });
     
-    // Обработка кликов по навигации
+    // Плавная прокрутка для всех внутренних ссылок
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId && targetId !== '#') {
-                scrollToSection(targetId.substring(1));
+                const targetElement = document.getElementById(targetId.substring(1));
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });
-    
-    // Плавное появление страницы
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-    
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
-    
-    // Обновляем активную навигацию при загрузке
-    updateActiveNav();
 });
-
-// Hover эффекты для карточек
-document.querySelectorAll('.driver-card, .car-card, .today-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-    });
-});
-
-// Добавляем простые стили для анимаций
-const style = document.createElement('style');
-style.textContent = `
-    .nav-link.active {
-        color: #ff5800 !important;
-    }
-    
-    .nav-link.active::after {
-        width: 100% !important;
-    }
-    
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-`;
-document.head.appendChild(style);
