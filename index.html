@@ -3,32 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McLaren MCL39 — Технические характеристики 2024</title>
+    <title>McLaren Racing — История команды, гонщики и автомобили</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏎️</text></svg>">
 </head>
 <body>
     <!-- Статичная вывеска -->
     <div class="static-title">
-        <div class="static-model">MCL39</div>
-        <div class="static-year">2024</div>
+        <div class="static-text">McLaren</div>
+        <div class="static-subtext">Since 1963</div>
     </div>
 
-    
     <!-- Шапка -->
     <header class="header">
         <nav class="container nav-container">
             <div class="logo">
-                <div class="logo-icon">MCL</div>
-                <span class="logo-title">McLaren MCL39</span>
+                <div class="logo-icon">M</div>
+                <span class="logo-title">McLaren Racing</span>
             </div>
             
             <div class="desktop-menu">
-                <a href="#main" class="nav-link">Общая информация</a>
-                <a href="#engine" class="nav-link">Двигатель</a>
-                <a href="#chassis" class="nav-link">Шасси</a>
-                <a href="#aero" class="nav-link">Аэродинамика</a>
-                <a href="#contact" class="nav-link">Контакты</a>
+                <a href="#history" class="nav-link">История</a>
+                <a href="#drivers" class="nav-link">Гонщики</a>
+                <a href="#cars" class="nav-link">Автомобили</a>
+                <a href="#today" class="nav-link">Сегодня</a>
             </div>
             
             <button class="burger-btn" id="burgerBtn" aria-label="Меню">
@@ -39,266 +37,244 @@
         </nav>
         
         <div class="mobile-menu" id="mobileMenu">
-            <a href="#main" class="mobile-link" onclick="closeMenu()">Общая информация</a>
-            <a href="#engine" class="mobile-link" onclick="closeMenu()">Двигатель</a>
-            <a href="#chassis" class="mobile-link" onclick="closeMenu()">Шасси</a>
-            <a href="#aero" class="mobile-link" onclick="closeMenu()">Аэродинамика</a>
-            <a href="#contact" class="mobile-link" onclick="closeMenu()">Контакты</a>
+            <a href="#history" class="mobile-link" onclick="closeMenu()">История</a>
+            <a href="#drivers" class="mobile-link" onclick="closeMenu()">Гонщики</a>
+            <a href="#cars" class="mobile-link" onclick="closeMenu()">Автомобили</a>
+            <a href="#today" class="mobile-link" onclick="closeMenu()">Сегодня</a>
         </div>
     </header>
 
     <!-- Главный экран -->
-    <section id="main" class="hero">
+    <section id="hero" class="hero">
         <div class="container hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">McLaren <span class="hero-highlight">MCL39</span></h1>
-                <p class="hero-subtitle">Formula 1 2024 Season</p>
-                <p class="hero-description">
-                    McLaren MCL39 — новейший болид команды McLaren для сезона 2024 Formula 1.
-                    Полностью переработанная аэродинамика, усовершенствованная гибридная система
-                    и инновационные решения в соответствии с регламентом FIA 2024.
-                </p>
-                <div class="hero-specs">
-                    <div class="spec-item">
-                        <div class="spec-value">MCL39</div>
-                        <div class="spec-label">Модель</div>
-                    </div>
-                    <div class="spec-item">
-                        <div class="spec-value">Mercedes</div>
-                        <div class="spec-label">Двигатель</div>
-                    </div>
-                    <div class="spec-item">
-                        <div class="spec-value">798 кг</div>
-                        <div class="spec-label">Минимальный вес</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="hero-car">
-                <div class="car-container">
-                    <div class="car-image" id="carImage">
-                        <div class="car-overlay">
-                            <div class="car-spec">V6 1.6L Turbo</div>
-                            <div class="car-spec">Mercedes PU106C</div>
-                            <div class="car-spec">15,000 об/мин</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h1 class="hero-title">McLaren <span class="hero-highlight">Racing</span></h1>
+            <p class="hero-subtitle">Легенда Формулы 1 с 1963 года</p>
+            <p class="hero-description">
+                От скромных новозеландских корней до вершины автоспорта. 
+                Команда, определившая ход истории гонок, с 8 чемпионами мира 
+                и революционными технологическими решениями.
+            </p>
+            <button class="hero-btn" onclick="scrollToSection('history')">Исследовать историю</button>
         </div>
     </section>
 
-    <!-- Общая информация -->
-    <section id="general" class="info-section">
+    <!-- История команды -->
+    <section id="history" class="section dark">
         <div class="container">
             <h2 class="section-title">
-                Общая <span class="section-highlight">информация</span>
+                История <span class="section-highlight">команды</span>
             </h2>
             
-            <div class="info-grid">
-                <div class="info-card">
-                    <div class="info-icon"></div>
-                    <h3>Команда</h3>
-                    <p>McLaren Formula 1 Team</p>
+            <div class="history-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">1963</div>
+                    <div class="timeline-content">
+                        <h3>Основание</h3>
+                        <p>Новозеландский гонщик Брюс Макларен и американец Тедди Майер основывают Bruce McLaren Motor Racing Ltd.</p>
+                    </div>
                 </div>
-                <div class="info-card">
-                    <div class="info-icon"></div>
-                    <h3>Модель</h3>
-                    <p>MCL39</p>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">1966</div>
+                    <div class="timeline-content">
+                        <h3>Дебют в Формуле 1</h3>
+                        <p>Команда дебютирует в королевском классе автогонок на Гран-при Монако.</p>
+                    </div>
                 </div>
-                <div class="info-card">
-                    <div class="info-icon"></div>
-                    <h3>Сезон</h3>
-                    <p>Formula 1 2024</p>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">1968</div>
+                    <div class="timeline-content">
+                        <h3>Первая победа в Ф1</h3>
+                        <p>Брюс Макларен одерживает первую победу команды в Формуле 1 на Гран-при Бельгии.</p>
+                    </div>
                 </div>
-                <div class="info-card">
-                    <div class="info-icon"></div>
-                    <h3>Шасси</h3>
-                    <p>Монокок из углеродного волокна (carbon composite)</p>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">1970</div>
+                    <div class="timeline-content">
+                        <h3>Трагическая потеря</h3>
+                        <p>Брюс Макларен погибает во время тестовых заездов на трассе Гудвуд. Его наследие продолжает жить.</p>
+                    </div>
                 </div>
-                <div class="info-card">
-                    <div class="info-icon"></div>
-                    <h3>Регламент</h3>
-                    <p>FIA Formula One Technical Regulations 2024</p>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">1974</div>
+                    <div class="timeline-content">
+                        <h3>Первый чемпионский титул</h3>
+                        <p>Эмерсон Фиттипальди приносит команде первый титул чемпиона мира. McLaren также выигрывает Кубок конструкторов.</p>
+                    </div>
                 </div>
-                <div class="info-card">
-                    <div class="info-icon"></div>
-                    <h3>Вес</h3>
-                    <p>798 кг (с пилотом)</p>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">1981</div>
+                    <div class="timeline-content">
+                        <h3>Новая эра</h3>
+                        <p>Объединение с Project Four Рона Денниса. Начало самой успешной эпохи в истории команды.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">1988</div>
+                    <div class="timeline-content">
+                        <h3>Абсолютное доминирование</h3>
+                        <p>Айртон Сенна и Ален Прост выигрывают 15 из 16 гонок сезона на революционном McLaren MP4/4.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Силовая установка -->
-    <section id="engine" class="specs-section dark">
+    <!-- Легендарные гонщики -->
+    <section id="drivers" class="section">
         <div class="container">
             <h2 class="section-title">
-                Силовая <span class="section-highlight">установка</span>
+                Легендарные <span class="section-highlight">гонщики</span>
             </h2>
             
-            <div class="specs-details">
-                <div class="specs-category">
-                    <h3><span class="category-icon"></span> Двигатель Mercedes-AMG</h3>
-                    <div class="specs-grid">
-                        <div class="spec-detail">
-                            <div class="detail-label">Производитель</div>
-                            <div class="detail-value">Mercedes-AMG High Performance Powertrains</div>
+            <div class="drivers-grid">
+                <div class="driver-card">
+                    <div class="driver-header">
+                        <div class="driver-name">Брюс Макларен</div>
+                        <div class="driver-years">1966-1970</div>
+                    </div>
+                    <div class="driver-stats">
+                        <div class="stat">
+                            <span class="stat-label">Побед в Ф1:</span>
+                            <span class="stat-value">4</span>
                         </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Обозначение</div>
-                            <div class="detail-value">Mercedes PU106C Hybrid</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Тип</div>
-                            <div class="detail-value">1.6-литровый V6 с турбонаддувом</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Угол развала</div>
-                            <div class="detail-value">90°</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Обороты</div>
-                            <div class="detail-value">15,000 об/мин</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Расход топлива</div>
-                            <div class="detail-value">100 кг/час (лимит)</div>
+                        <div class="stat">
+                            <span class="stat-label">Роль:</span>
+                            <span class="stat-value">Основатель и гонщик</span>
                         </div>
                     </div>
+                    <p class="driver-desc">Основатель команды, пионер автогонок и талантливый инженер.</p>
                 </div>
                 
-                <div class="specs-category">
-                    <h3><span class="category-icon"></span> Гибридная система (ERS)</h3>
-                    <div class="specs-grid">
-                        <div class="spec-detail">
-                            <div class="detail-label">MGU-K (мощность)</div>
-                            <div class="detail-value">~120 кВт (160 л.с.)</div>
+                <div class="driver-card">
+                    <div class="driver-header">
+                        <div class="driver-name">Айртон Сенна</div>
+                        <div class="driver-years">1988-1993</div>
+                    </div>
+                    <div class="driver-stats">
+                        <div class="stat">
+                            <span class="stat-label">Чемпионских титулов:</span>
+                            <span class="stat-value">3</span>
                         </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">MGU-H</div>
-                            <div class="detail-value">Интегрирован с турбокомпрессором</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Батарея</div>
-                            <div class="detail-value">Литий-ионная (FIA-стандарт)</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Электроника</div>
-                            <div class="detail-value">Стандартный блок управления FIA</div>
+                        <div class="stat">
+                            <span class="stat-label">Побед за McLaren:</span>
+                            <span class="stat-value">35</span>
                         </div>
                     </div>
+                    <p class="driver-desc">Легендарный бразилец, чье соперничество с Простом стало частью истории Ф1.</p>
                 </div>
                 
-                <div class="specs-category">
-                    <h3><span class="category-icon"></span> Трансмиссия</h3>
-                    <div class="specs-grid">
-                        <div class="spec-detail">
-                            <div class="detail-label">Коробка передач</div>
-                            <div class="detail-value">8-ступенчатая, продольная</div>
+                <div class="driver-card">
+                    <div class="driver-header">
+                        <div class="driver-name">Ален Прост</div>
+                        <div class="driver-years">1984-1989</div>
+                    </div>
+                    <div class="driver-stats">
+                        <div class="stat">
+                            <span class="stat-label">Чемпионских титулов:</span>
+                            <span class="stat-value">3</span>
                         </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Тип</div>
-                            <div class="detail-value">Полуавтоматическая</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Задняя передача</div>
-                            <div class="detail-value">1 (обязательная)</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Дифференциал</div>
-                            <div class="detail-value">Электронно-управляемый</div>
+                        <div class="stat">
+                            <span class="stat-label">Побед за McLaren:</span>
+                            <span class="stat-value">30</span>
                         </div>
                     </div>
+                    <p class="driver-desc">«Профессор» – тактический гений, один из самых успешных пилотов в истории.</p>
+                </div>
+                
+                <div class="driver-card">
+                    <div class="driver-header">
+                        <div class="driver-name">Мика Хаккинен</div>
+                        <div class="driver-years">1993-2001</div>
+                    </div>
+                    <div class="driver-stats">
+                        <div class="stat">
+                            <span class="stat-label">Чемпионских титулов:</span>
+                            <span class="stat-value">2</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Побед за McLaren:</span>
+                            <span class="stat-value">20</span>
+                        </div>
+                    </div>
+                    <p class="driver-desc">«Летучий финн», возродивший чемпионские традиции McLaren в конце 1990-х.</p>
+                </div>
+                
+                <div class="driver-card">
+                    <div class="driver-header">
+                        <div class="driver-name">Льюис Хэмилтон</div>
+                        <div class="driver-years">2007-2012</div>
+                    </div>
+                    <div class="driver-stats">
+                        <div class="stat">
+                            <span class="stat-label">Чемпионских титулов:</span>
+                            <span class="stat-value">1 (с McLaren)</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Побед за McLaren:</span>
+                            <span class="stat-value">21</span>
+                        </div>
+                    </div>
+                    <p class="driver-desc">Самый успешный пилот в истории Ф1, свой первый титул завоевал с McLaren.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Шасси и подвеска -->
-    <section id="chassis" class="specs-section">
+    <!-- Знаковые автомобили -->
+    <section id="cars" class="section dark">
         <div class="container">
             <h2 class="section-title">
-                Шасси и <span class="section-highlight">подвеска</span>
+                Знаковые <span class="section-highlight">автомобили</span>
             </h2>
             
-            <div class="specs-details">
-                <div class="specs-category">
-                    <h3><span class="category-icon"></span> Передняя подвеска</h3>
-                    <div class="specs-grid">
-                        <div class="spec-detail">
-                            <div class="detail-label">Тип</div>
-                            <div class="detail-value">Push-rod (толкающая штанга)</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Конструкция</div>
-                            <div class="detail-value">Двойные поперечные рычаги</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Пружины</div>
-                            <div class="detail-value">Торсионные</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Амортизаторы</div>
-                            <div class="detail-value">Гидравлические</div>
+            <div class="cars-grid">
+                <div class="car-card">
+                    <div class="car-image" style="background: linear-gradient(135deg, rgba(255,88,0,0.2), rgba(0,0,0,0.8));">
+                        <div class="car-model">McLaren F1</div>
+                    </div>
+                    <div class="car-info">
+                        <h3>McLaren F1 (1992-1998)</h3>
+                        <p>Легендарный дорожный гиперкар. Был самым быстрым серийным автомобилем в мире (386 км/ч), с центральным расположением водителя и атмосферным двигателем BMW V12.</p>
+                        <div class="car-specs">
+                            <span class="spec">Двигатель: 6.1L V12</span>
+                            <span class="spec">Мощность: 627 л.с.</span>
+                            <span class="spec">Тираж: 106 экз.</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="specs-category">
-                    <h3><span class="category-icon"></span> Задняя подвеска</h3>
-                    <div class="specs-grid">
-                        <div class="spec-detail">
-                            <div class="detail-label">Тип</div>
-                            <div class="detail-value">Pull-rod (тянущая штанга)</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Конструкция</div>
-                            <div class="detail-value">Двойные поперечные рычаги</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Элементы</div>
-                            <div class="detail-value">Торсионные</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Амортизаторы</div>
-                            <div class="detail-value">Гидравлические</div>
+                <div class="car-card">
+                    <div class="car-image" style="background: linear-gradient(135deg, rgba(255,88,0,0.2), rgba(0,0,0,0.8));">
+                        <div class="car-model">MP4/4</div>
+                    </div>
+                    <div class="car-info">
+                        <h3>McLaren MP4/4 (1988)</h3>
+                        <p>Один из самых доминирующих болидов в истории Ф1. Айртон Сенна и Ален Прост выиграли на нем 15 из 16 гонок сезона 1988 года.</p>
+                        <div class="car-specs">
+                            <span class="spec">Двигатель: Honda RA168E V6</span>
+                            <span class="spec">Мощность: ~650 л.с.</span>
+                            <span class="spec">Побед в сезоне: 15 из 16</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="specs-category">
-                    <h3><span class="category-icon"></span> Рулевое управление</h3>
-                    <div class="specs-grid">
-                        <div class="spec-detail">
-                            <div class="detail-label">Тип</div>
-                            <div class="detail-value">Электро-гидравлическое</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Передаточное отношение</div>
-                            <div class="detail-value">Регулируемое</div>
-                        </div>
+                <div class="car-card">
+                    <div class="car-image" style="background: linear-gradient(135deg, rgba(255,88,0,0.2), rgba(0,0,0,0.8));">
+                        <div class="car-model">MP4/1</div>
                     </div>
-                </div>
-                
-                <div class="specs-category">
-                    <h3><span class="category-icon"></span> Тормозная система</h3>
-                    <div class="specs-grid">
-                        <div class="spec-detail">
-                            <div class="detail-label">Диски</div>
-                            <div class="detail-value">Углерод-углерод (carbon-carbon)</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Суппорты</div>
-                            <div class="detail-value">Многопоршневые</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Поставщики</div>
-                            <div class="detail-value">Brembo / Carbon Industrie</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Система</div>
-                            <div class="detail-value">Brake-by-wire (на задней оси)</div>
+                    <div class="car-info">
+                        <h3>McLaren MP4/1 (1981)</h3>
+                        <p>Революционный болид, ставший первым в Формуле 1 с цельнокарбоновым монококом. Эта инновация задала новый стандарт прочности и безопасности.</p>
+                        <div class="car-specs">
+                            <span class="spec">Материал: Карбоновый монокок</span>
+                            <span class="spec">Инновация: Безопасность</span>
+                            <span class="spec">Эпоха: Начало 80-х</span>
                         </div>
                     </div>
                 </div>
@@ -306,208 +282,85 @@
         </div>
     </section>
 
-    <!-- Аэродинамика -->
-    <section id="aero" class="specs-section dark">
+    <!-- McLaren сегодня -->
+    <section id="today" class="section">
         <div class="container">
             <h2 class="section-title">
-                Аэродинамика и <span class="section-highlight">колеса</span>
+                McLaren <span class="section-highlight">сегодня</span>
             </h2>
             
-            <div class="specs-details">
-                <div class="specs-category">
-                    <h3><span class="category-icon"></span> Аэродинамика McLaren</h3>
-                    <div class="specs-grid">
-                        <div class="spec-detail">
-                            <div class="detail-label">Разработка</div>
-                            <div class="detail-value">Полностью разработана McLaren</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Переднее антикрыло</div>
-                            <div class="detail-value">Многоэлементная геометрия</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Подполье</div>
-                            <div class="detail-value">Venturi-каналы (ground effect)</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Боковые понтоны</div>
-                            <div class="detail-value">Переработанная форма (эволюция 2023)</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Заднее антикрыло</div>
-                            <div class="detail-value">С системой DRS</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">DRS</div>
-                            <div class="detail-value">Активируемая задняя створка</div>
-                        </div>
-                    </div>
+            <div class="today-grid">
+                <div class="today-card">
+                    <div class="today-icon">🏆</div>
+                    <h3>Достижения</h3>
+                    <ul class="today-list">
+                        <li><strong>13 титулов</strong> чемпиона мира среди пилотов</li>
+                        <li><strong>10 Кубков</strong> конструкторов</li>
+                        <li><strong>183 победы</strong> в Гран-при Формулы 1</li>
+                        <li><strong>486 подиумов</strong> за всю историю</li>
+                    </ul>
                 </div>
                 
-                <div class="specs-category">
-                    <h3><span class="category-icon"></span> Колёса и шины</h3>
-                    <div class="specs-grid">
-                        <div class="spec-detail">
-                            <div class="detail-label">Шины</div>
-                            <div class="detail-value">Pirelli (спецификация 2024)</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Диаметр</div>
-                            <div class="detail-value">18 дюймов</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Типы (слики)</div>
-                            <div class="detail-value">C0–C5</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Дождевые</div>
-                            <div class="detail-value">Intermediate, Full Wet</div>
-                        </div>
-                    </div>
+                <div class="today-card">
+                    <div class="today-icon">👥</div>
+                    <h3>Текущий состав (2026)</h3>
+                    <ul class="today-list">
+                        <li><strong>Руководитель команды:</strong> Андреа Стелла</li>
+                        <li><strong>CEO:</strong> Зак Браун</li>
+                        <li><strong>Пилоты:</strong> Ландо Норрис и Оскар Пиастри</li>
+                        <li><strong>Двигатель:</strong> Mercedes</li>
+                        <li><strong>Шасси:</strong> McLaren MCL40</li>
+                    </ul>
                 </div>
                 
-                <div class="specs-category">
-                    <h3><span class="category-icon"></span> Габариты</h3>
-                    <div class="specs-grid">
-                        <div class="spec-detail">
-                            <div class="detail-label">Ширина</div>
-                            <div class="detail-value">2000 мм</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Колёсная база</div>
-                            <div class="detail-value">Адаптирована под аэродинамику</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="specs-category">
-                    <h3><span class="category-icon"></span> Топливо и жидкости</h3>
-                    <div class="specs-grid">
-                        <div class="spec-detail">
-                            <div class="detail-label">Топливо</div>
-                            <div class="detail-value">Petronas (E10, устойчивое топливо FIA)</div>
-                        </div>
-                        <div class="spec-detail">
-                            <div class="detail-label">Смазочные материалы</div>
-                            <div class="detail-value">Petronas Lubricants</div>
-                        </div>
-                    </div>
+                <div class="today-card">
+                    <div class="today-icon">🏁</div>
+                    <h3>Наследие и будущее</h3>
+                    <p>Команда продолжает оставаться одним из столпов Формулы 1, сочетая богатую историю с инновационным подходом к технологиям и гонкам.</p>
+                    <p>McLaren также успешно развивает дорожное автомобильное подразделение, выпуская гиперкары, такие как P1, Senna и Speedtail.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Электроника -->
-    <section id="electronics" class="tech-section">
-        <div class="container">
-            <h2 class="section-title">
-                Электроника и <span class="section-highlight">системы</span>
-            </h2>
-            
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <div class="tech-icon"></div>
-                    <h3>Блок управления</h3>
-                    <p>Стандартный блок управления FIA ECU</p>
-                </div>
-                
-                <div class="tech-card">
-                    <div class="tech-icon"></div>
-                    <h3>Телеметрия</h3>
-                    <p>Передача данных в реальном времени</p>
-                </div>
-                
-                <div class="tech-card">
-                    <div class="tech-icon"></div>
-                    <h3>Системы контроля</h3>
-                    <p>ERS, тормозов и температуры</p>
-                </div>
-                
-                <div class="tech-card">
-                    <div class="tech-icon"></div>
-                    <h3>Термоменеджмент</h3>
-                    <p>Продвинутая система контроля температуры</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Контактная форма -->
-<section id="contact" class="contact-section">
-    <div class="container">
-        <h2 class="section-title">
-            Обратная <span class="section-highlight">связь</span>
-        </h2>
-        
-        <form id="telegramForm" class="telegram-form">
-            <div class="form-group">
-                <label for="userName">Ваше имя *</label>
-                <input type="text" id="userName" name="name" required placeholder="Иванов Иван">
-            </div>
-            
-            <div class="form-group">
-                <label for="userEmail">Email *</label>
-                <input type="email" id="userEmail" name="email" required placeholder="example@mail.com">
-            </div>
-            
-            <div class="form-group">
-                <label for="userMessage">Сообщение *</label>
-                <textarea id="userMessage" name="message" rows="4" required 
-                          placeholder="Ваш вопрос или комментарий о McLaren MCL39..."></textarea>
-            </div>
-            
-            <button type="submit" class="submit-btn">Отправить в Telegram</button>
-        </form>
-        
-        <div id="telegramSuccess" class="success-message" style="display: none;">
-            ✅ Сообщение отправлено! Мы ответим вам в Telegram.
-        </div>
-        
-        <div id="telegramError" class="error-message" style="display: none;">
-            ❌ Ошибка отправки. Попробуйте позже.
-        </div>
-    </div>
-</section>
 
     <!-- Подвал -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <div class="logo-icon">MCL</div>
-                    <div class="footer-title">McLaren MCL39</div>
-                    <div class="footer-subtitle">2024 Formula 1 Season</div>
-                </div>
-                
-                <div class="footer-tech">
-                    <h4>Ключевые характеристики</h4>
-                    <div class="tech-spec">
-                        <span>Двигатель:</span>
-                        <span>Mercedes PU106C V6</span>
-                    </div>
-                    <div class="tech-spec">
-                        <span>Вес:</span>
-                        <span>798 кг (с пилотом)</span>
-                    </div>
-                    <div class="tech-spec">
-                        <span>Шины:</span>
-                        <span>Pirelli 18"</span>
-                    </div>
+                    <div class="logo-icon">M</div>
+                    <div class="footer-title">McLaren Racing</div>
+                    <div class="footer-subtitle">Легенда автоспорта с 1963 года</div>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Технические разделы</h4>
-                    <a href="#main">Общая информация</a>
-                    <a href="#engine">Силовая установка</a>
-                    <a href="#chassis">Шасси</a>
-                    <a href="#aero">Аэродинамика</a>
-                    <a href="#contact">Контакты</a>
+                    <h4>Разделы</h4>
+                    <a href="#history">История команды</a>
+                    <a href="#drivers">Легендарные гонщики</a>
+                    <a href="#cars">Знаковые автомобили</a>
+                    <a href="#today">McLaren сегодня</a>
+                </div>
+                
+                <div class="footer-info">
+                    <h4>Статистика</h4>
+                    <div class="footer-stat">
+                        <span>Основана:</span>
+                        <span>1963 год</span>
+                    </div>
+                    <div class="footer-stat">
+                        <span>Первый Гран-при:</span>
+                        <span>Монако 1966</span>
+                    </div>
+                    <div class="footer-stat">
+                        <span>Всего Гран-при:</span>
+                        <span>950+</span>
+                    </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>© 2024 McLaren Racing Limited. Техническая спецификация болида MCL39.</p>
-                <p class="disclaimer">Все данные соответствуют регламенту FIA Formula One 2024.</p>
+                <p>© 2025 McLaren Racing Heritage. Информационный сайт о истории команды.</p>
+                <p class="disclaimer">Информация основана на открытых источниках, включая Википедию и официальные материалы McLaren.</p>
             </div>
         </div>
     </footer>
